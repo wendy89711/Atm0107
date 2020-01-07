@@ -40,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
             });
     }
     public void enter(View view) {
-        Intent username = new Intent(this,Username.class);
-        startActivityForResult(username,1);
+        if (login == false) {
+            Intent username = new Intent(this, Username.class);
+            startActivityForResult(username, 1);
+        }
     }
 
     public void hello(View view) {
